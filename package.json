@@ -8,8 +8,16 @@
     "app": "node lib/lisp-compiler.js",
     "build:app": "tsc --module commonjs --outDir lib -w src/*.ts -w",
     "build:test": "tsc --module commonjs --outFile lib/test/lisp-compiler-test.js -w test/index.ts",
-    "build:full": "npm run build:app && npm run build:test"
+    "build:full": "npm run build:app && npm run build:test",
+    "lint": "node tools/lint.js"
   },
   "author": "Thomas Klinger, Sandro Joost",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "install": "^0.4.1",
+    "npm": "^3.5.3",
+    "tslint": "^3.2.1",
+    "tslint-stylish": "^2.1.0-beta",
+    "typescript": "^1.7.5"
+  }
 }
