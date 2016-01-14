@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es3",
+        "noImplicitAny": false,
+        "outDir": "lib",
+        "outFile": "lib/lisp-compiler.js",
+        "rootDir": ".",
+        "sourceMap": false,
+        "removeComments": false
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "atom":  {
+        "formatOnSave": true
+    },
+    "formatCodeOptions": {
+        "indentSize": 4,
+        "tabSize": 4,
+        "convertTabsToSpaces": true
+    }
+}

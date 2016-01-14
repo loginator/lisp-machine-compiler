@@ -2,18 +2,14 @@
   "name": "lisp-compiler",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/lisp-compiler.js",
   "scripts": {
-    "dist": "babel src/index.js -o lib/index.js -w",
-    "exec": "node lib/app.js",
-    "test": "node test/index.js"
+    "test": "node lib/test/lisp-compiler-test.js",
+    "app": "node lib/lisp-compiler.js",
+    "build:app": "tsc --module commonjs --outDir lib -w src/*.ts -w",
+    "build:test": "tsc --module commonjs --outFile lib/test/lisp-compiler-test.js -w test/index.ts",
+    "build:full": "npm run build:app && npm run build:test"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "babel": "^6.3.26",
-    "babel-cli": "^6.4.0",
-    "babel-preset-es2015": "^6.3.13",
-    "chai": "^3.4.1"
-  }
+  "author": "Thomas Klinger, Sandro Joost",
+  "license": "ISC"
 }
